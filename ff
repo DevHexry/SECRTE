@@ -1,0 +1,10 @@
+getgenv().Toggle = true --// Test whether the script is on or off
+game:GetService("RunService").Heartbeat:Connect(function()
+  if getgenv().Toggle then
+   if game:GetService("Players").LocalPlayer.PlayerGui.MenuUI.VoteKick and game:GetService("Players").LocalPlayer.PlayerGui.MenuUI.VoteKick.Title.Text == "Vote Kick <font color = '#FFA500'>".. game.Players.LocalPlayer.Name .. "</font>?" then
+game:GetService("TeleportService"):Teleport(game.PlaceId)
+   else
+wait()
+end
+end
+end)
